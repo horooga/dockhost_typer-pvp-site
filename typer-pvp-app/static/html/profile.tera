@@ -1,0 +1,15 @@
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="static/pikme.css"/>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <title>Typer</title>
+</head>
+<body>
+  <div class="page">
+    <h1>Hello, {{ username }}!</h1>
+
+    <form action="/logout" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+</body>

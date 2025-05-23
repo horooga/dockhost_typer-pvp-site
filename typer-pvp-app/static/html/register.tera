@@ -1,0 +1,32 @@
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="static/pikme.css"/>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <title>Typer</title>
+</head>
+<body>
+  <div class="page">
+    {% if errs is defined %}
+      {% for err in errs %}
+        <h1 style="color: #b00000">{{ err }}</h1>
+      {% endfor %}
+    {% endif %}
+
+    <form action="/register-processing" method="post" autocomplete="off">
+      <input
+        type="text"
+        name="username"
+        placeholder="username"
+        required
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="password"
+        required
+      />
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+
